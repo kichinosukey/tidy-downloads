@@ -1,0 +1,23 @@
+[project]
+name = "tidy-downloads"
+version = "0.1.1"
+description = "Safe Downloads organizer using on-device apfel (macOS 26+)"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+tidy-downloads = "tidy_downloads.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.tidy-downloads.fastlane</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/bash</string>
+      <string>REPLACE_WITH_REPO_ROOT/scripts/run_with_apfel.sh</string>
+      <string>run</string>
+      <string>--target-dir</string>
+      <string>/Users/REPLACE_ME/Downloads</string>
+      <string>--fast-lane</string>
+      <string>--preset</string>
+      <string>downloads-default</string>
+      <string>--yes</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>3600</integer>
+    <key>WorkingDirectory</key>
+    <string>REPLACE_WITH_REPO_ROOT</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/tidy-downloads-fastlane.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/tidy-downloads-fastlane.err</string>
+  </dict>
+</plist>

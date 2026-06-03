@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "created_at": "2026-06-03T12:00:00+09:00",
+  "target_dir": "/tmp/downloads-fixture",
+  "mode": "plan",
+  "fast_lane": true,
+  "preset": "downloads-default",
+  "rules": {
+    "goal": "fixture",
+    "taxonomy": [{"path": "documents/notes", "description": "notes"}]
+  },
+  "planner": {
+    "provider": "local",
+    "transport": "openai-compatible",
+    "api_mode": "chat_completions",
+    "model": "apple-foundationmodel",
+    "host": "127.0.0.1",
+    "batch_size": 15,
+    "strategy": "compact_hybrid",
+    "llm_request_count": 1
+  },
+  "summary": "fixture",
+  "counts": {
+    "files_scanned": 1,
+    "files_considered": 1,
+    "planned_moves": 1,
+    "skipped": 0,
+    "blocked": 0,
+    "new_folders": 1,
+    "applied_moves": 0
+  },
+  "warnings": [],
+  "timings": {
+    "scan_seconds": 0.01,
+    "plan_seconds": 1.0,
+    "llm_seconds": 0.9,
+    "validation_seconds": 0.1,
+    "save_seconds": 0.01,
+    "apply_seconds": 0.0,
+    "processing_seconds": 1.01,
+    "total_seconds": 1.01
+  },
+  "operations": [
+    {
+      "source": "notes.txt",
+      "destination_dir": "documents/notes",
+      "new_name": "notes.txt",
+      "target_path": "documents/notes/notes.txt",
+      "action": "move",
+      "confidence": 0.85,
+      "reason": "fixture",
+      "can_apply": true,
+      "issues": []
+    }
+  ]
+}
